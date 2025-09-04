@@ -1,10 +1,10 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import { FlatList, KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
-import { ThemedView } from '../../../components/ThemedView';
-import { ChatHeader } from '../../../components/chat/ChatHeader';
-import { ChatInput } from '../../../components/chat/ChatInput';
-import { MessageList } from '../../../components/chat/MessageList';
+import { ThemedView } from '../../components/ThemedView';
+import { ChatHeader } from '../../components/chat/ChatHeader';
+import { ChatInput } from '../../components/chat/ChatInput';
+import { MessageList } from '../../components/chat/MessageList';
 
 interface Message {
     id: string;
@@ -14,7 +14,7 @@ interface Message {
     status: 'sending' | 'sent' | 'error';
 }
 
-export default function ChatScreen() {
+export default function ChatDetailScreen() {
     const { id } = useLocalSearchParams();
     const [messages, setMessages] = useState<Message[]>([
         {
@@ -135,3 +135,4 @@ const styles = StyleSheet.create({
         borderTopColor: '#E5E5E5',
     },
 });
+

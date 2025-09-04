@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { ThemedText } from '../ThemedText';
@@ -44,6 +45,78 @@ export function ChatList({ searchQuery }: ChatListProps) {
             unreadCount: 0,
             avatar: '✨',
         },
+        {
+            id: '4',
+            title: 'AI助手 - 编程专家',
+            lastMessage: '这段代码可以这样优化，提高性能...',
+            timestamp: '昨天',
+            unreadCount: 1,
+            avatar: '💻',
+        },
+        {
+            id: '5',
+            title: 'AI助手 - 健康顾问',
+            lastMessage: '根据你的情况，建议你多运动...',
+            timestamp: '2天前',
+            unreadCount: 0,
+            avatar: '🏥',
+        },
+        {
+            id: '6',
+            title: 'AI助手 - 财务顾问',
+            lastMessage: '你的投资组合看起来不错，建议...',
+            timestamp: '3天前',
+            unreadCount: 0,
+            avatar: '💰',
+        },
+        {
+            id: '7',
+            title: 'AI助手 - 旅行规划师',
+            lastMessage: '这次旅行我为你准备了详细的攻略...',
+            timestamp: '3天前',
+            unreadCount: 0,
+            avatar: '✈️',
+        },
+        {
+            id: '8',
+            title: 'AI助手 - 美食达人',
+            lastMessage: '这道菜的做法很简单，首先...',
+            timestamp: '4天前',
+            unreadCount: 0,
+            avatar: '🍳',
+        },
+        {
+            id: '9',
+            title: 'AI助手 - 语言导师',
+            lastMessage: '今天我们来学习新的语法点...',
+            timestamp: '4天前',
+            unreadCount: 0,
+            avatar: '📚',
+        },
+        {
+            id: '10',
+            title: 'AI助手 - 心理咨询师',
+            lastMessage: '我理解你的感受，让我们一起来分析...',
+            timestamp: '5天前',
+            unreadCount: 0,
+            avatar: '🧘',
+        },
+        {
+            id: '11',
+            title: 'AI助手 - 健身教练',
+            lastMessage: '今天的训练计划包括有氧运动...',
+            timestamp: '5天前',
+            unreadCount: 0,
+            avatar: '💪',
+        },
+        {
+            id: '12',
+            title: 'AI助手 - 音乐制作人',
+            lastMessage: '这个旋律很有潜力，我们可以...',
+            timestamp: '6天前',
+            unreadCount: 0,
+            avatar: '🎵',
+        },
     ];
 
     // 过滤搜索结果
@@ -53,8 +126,8 @@ export function ChatList({ searchQuery }: ChatListProps) {
     );
 
     const handleChatPress = (chatId: string) => {
-        // TODO: 导航到聊天详情页
-        console.log('打开聊天:', chatId);
+        // 导航到聊天详情页
+        router.push(`/chat-detail/${chatId}`);
     };
 
     const renderChatItem = ({ item }: { item: ChatItemData }) => (

@@ -3,12 +3,12 @@ import { StyleSheet, View } from 'react-native';
 import { ThemedText } from '../../components/ThemedText';
 import { ThemedView } from '../../components/ThemedView';
 
-export default function DiscordScreen() {
+export default function MineScreen() {
   return (
     <ThemedView style={styles.container}>
       <View style={styles.content}>
-        <ThemedText style={styles.icon}>🎮</ThemedText>
-        <ThemedText style={styles.title}>Discord 功能</ThemedText>
+        <ThemedText style={styles.icon}>👤</ThemedText>
+        <ThemedText style={styles.title}>个人中心</ThemedText>
         <ThemedText style={styles.subtitle}>正在开发中...</ThemedText>
         <ThemedText style={styles.description}>
           这个功能正在开发中，敬请期待！
